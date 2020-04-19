@@ -1,10 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Button from './src/components/Button'
+import Display from './src/components/Display'
+
 
 export default function App() {
+
+  state = {
+    displayValue: '0'//Vai aponta o valor do estado para a propriedade do componente display
+  }
+
   return (
     <View style={styles.container}>
+
+      <Display value={this.state.displayValue} />
+
       <View style={styles.button}>
         <Button label='AC'></Button>
         <Button label='/'></Button>
@@ -27,6 +37,7 @@ export default function App() {
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
